@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat Alternates';
+}
+
+h2{
+    text-align: center;
+}
+
+p, a, span{
+    font-family: 'Open Sans';
+}
+
+header, main, footer{
+    width: 100%;
+}
+
+
+
+header{
+    background-color: rgba(255, 0, 0, 0.438);
+}
+
+
+
+footer{
+    background-color: #ffaa0081;
+}
+
+
+.submenu{
+    background-color: #ffaa00ab;
+}
+
+
+/*Display grid*/
+
+.banner{
+    display: grid;
+    grid-template-columns:1fr;
+}
+
+.banner img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.destacados,.resumen,.oferta,.experiencia,.datos,.titulo,.corporativa,.equipo,.servi{
+    padding: 10px;
+    margin: 10px 0px;
+    display: grid;
+    gap: 10px;
+}
+
+.destacados{   
+    grid-template-columns:1fr;    
+}
+
+.destacados h3{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.destacados p{
+    font-size: 0.8em;
+}
+
+.destacados div{
+    padding: 80px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.resumen{
+    grid-template-columns:1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.resumen div:nth-child(1){
+    padding: 80px;
+}
+
+.resumen h1{
+    padding-bottom: 30px;
+}
+
+.resumen p{
+    font-size: 0.8em;
+}
+
+.oferta{
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: 2fr;
+    justify-content: center;
+}
+
+.oferta div{
+    text-align: center;
+    padding: 40px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.oferta h2{
+    font-size: 0.8em;
+}
+
+.experiencia{
+    grid-template-columns:repeat(3, 1fr);
+}
+
+.experiencia img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.datos{
+    grid-template-columns:1fr;
+    justify-content: center;
+}
+
+.datos div{
+    text-align: center;
+    padding: 20px;
+}
+
+.datos p{
+    font-size: 00.8em;
+}
+
+.datos img{
+    width: 100px;
+}
+
+/* estilos del menu y submenu en el footer*/
+
+.logo{
+    height: 50px;
+}
+
+.menu{
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu li{
+    padding: 0.4em;
+}
+
+.menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0em 0.2em;
+}
+
+.submenu{
+    box-sizing: border-box;
+    display: flex;
+    padding: 0px 20px;
+    justify-content:space-between;
+}
+
+.submenu ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.submenu li, .submenu span{
+    padding: 0.2em;
+    font-size: 0.8em;
+}
+
+.show_hide{
+    display: none;
+}
+
+.activar_m{
+    display: none;
+}
+
+.activar_m:checked ~ li{
+    display: block;
+}
+
+.menu_mob{
+    font-size: 1.5em;
+    padding: 0.4em;
+    cursor: pointer;
+    display: block;
+}
+
+.menu a,.submenu a{
+    color:black;
+}
+
+.menu a:hover,.submenu a:hover{
+    color:#FFA900;
+}
+
+.titulo{
+    grid-template-columns: 1fr;
+}
+
+.corporativa{
+    grid-template-columns: 1fr;
+}
+
+.corporativa img{
+    width: 100%;
+}
+
+.equipo{
+    grid-template-columns: 1fr;
+}
+
+.equipo img{
+    width: 150px;
+}
+
+.servi{
+    grid-template-columns: 1fr;
+}
+
+
+/*Responsivo*/
+
+@media screen and (min-width: 768px) {
+    .menu, .menu ul{
+        flex-direction: row;
+    }
+
+    .show_hide{
+        display: block;
+    }
+
+    .menu_mob{
+        display: none;
+    }
+
+    .destacados{   
+        grid-template-columns:repeat(3,1fr);    
+    }
+    .resumen{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .oferta{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .oferta h2{
+        font-size: 1em;
+    }
+    
+    .experiencia{
+        grid-template-columns:repeat(6, 1fr);
+    }
+    .datos{
+        grid-template-columns:repeat(5,1fr);
+    }
+
+    .datos div{
+        text-align: left;
+    }
+
+    .datos p, .resumen p,.destacados p{
+        font-size: 16px;
+    }
+
+    .titulo{
+        grid-template-columns: 1fr;
+    }
+    
+    .corporativa{
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+    .visio-mision{
+        grid-column: 2 / 4;
+    }
+    .equipo{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .servi{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
